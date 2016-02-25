@@ -99,15 +99,6 @@
 			</li>
 			
 			<li>
-				<a onclick="redirect('/categories.html#jekyll')">
-				
-					jekyll
-				
-				</a>
-				<sup>[1]</sup>
-			</li>
-			
-			<li>
 				<a onclick="redirect('/categories.html#presentation')">
 				
 				<b>presentation</b>
@@ -228,10 +219,10 @@
       <div class="wrapper">
         <div class="post">
   <h1 class="post-title">Talk like Hans Rosling</h1>
-  <span class="post-date">17 Feb 2016</span>
+  <span class="post-date">25 Feb 2016</span>
   <p>Preparing a motivation slide is not always straightforward. Inspired by a recent read <a href="http://www.amazon.com/Talk-Like-TED-Public-Speaking-Secrets/dp/1250041120">Talk Like TED</a>, I decided to add a bit of 'soul' into the recent data on Tuberculosis (TB), and tell a story of how TB 'evolves' in the past 25 years. Back in November 2012, I did a similar <a href="http://wp.sanger.ac.uk/barrettgroup/2013/02/06/moving-from-common-to-rare/">motivational slide</a> using <a href="https://github.com/mages/googleVis"><em>googleVis</em></a> based on the well-known Hans Rosling's popular 18-minutes <a href="https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen">TED talk</a> in 2006 that has been viewed more than five million times.</p>
 
-<p>In this blog, I will go into details of how I created the TB <em>motion chart</em>, and maybe tell a story or two along the way.</p>
+<p>In this blog, I will go into details of how I created the TB <a href="##%20Motion%20chart%20creation"><em>motion chart</em></a>, and maybe tell a story or two along the way.</p>
 
 <h2>Installation</h2>
 
@@ -251,7 +242,48 @@ install_github("mages/googleVis")
 </ol>
 
 
+<pre><code class="R">library(googleVis)
+
+#load GDP data
+GDP&lt;-read.csv("Data_Extract_From_World_Development_Indicators_Data.csv",h=T,stringsAsFactors = F,na.strings = "..")
+
+#reshape the GDP data
+library(reshape)
+mdata&lt;-melt(GDP,id=c("Country.Name"))
+names(mdata)&lt;-c("country","year","GDP_per_capita")
+mdata$year&lt;-gsub("X", "", mdata$year)
+
+# load TB burden data
+TB&lt;-read.csv("TB_burden_countries_2016-02-18.csv",h=T,stringsAsFactors = F)
+
+#select picked country
+TB[TB$country=="United States of America",]$country&lt;-"United States"
+countries&lt;-c(unique(TB[TB$g_whoregion=="AMR" &amp; TB$country %in% GDP$Country.Name,]$country))
+df1&lt;-mdata[mdata$country %in% countries,]
+
+df2&lt;-subset(TB[TB$country %in% countries,],select=c("country","year","g_whoregion","e_pop_num","e_prev_100k","e_prev_num","e_mort_exc_tbhiv_100k","e_mort_exc_tbhiv_num","e_inc_num","e_inc_100k"))
+
+#merge two dataset
+df&lt;-merge(df1,df2,by=c("country","year"))
+df$year&lt;-as.numeric(df$year)
+df$GDP_per_capita&lt;-as.numeric(df$GDP_per_capita)
+</code></pre>
+
 <h2>Motion chart creation</h2>
+
+<p>Now we are ready to create the Motion chart:</p>
+
+<pre><code class="R"># Some customized options
+myState&lt;-'{"iconKeySettings":[{"key":{"dim0":"Peru"}}, {"key":{"dim0":"United States"}}],"colorOption":"2","yAxisOption":"7","xAxisOption":"5","showTrails":false, "sizeOption":"8","showXScalePicker":false    }'
+
+# create the chart
+Motion=gvisMotionChart(df,idvar="country",timevar="year",xvar="e_prev_100k",yvar="e_mort_exc_tbhiv_100k",colorvar="g_wholeregion",sizevar="e_prev_num",options=list(state=myState))
+
+# Plot it (this will open a html file in your web browser)
+plot(Motion)
+# save it as html
+cat(Motion$html$chart,file="MotionChart.html")
+</code></pre>
 
 <!-- MotionChart generated in R 3.2.2 by googleVis 0.5.10 package -->
 
@@ -1764,7 +1796,7 @@ null,
 [
  "Bermuda",
 2014,
-85748, 
+85748,
 62376,
 0,
 0,
@@ -8911,12 +8943,18 @@ callbacks.shift()();
 
 
 
-<div id="MotionChartID16fe55a7c15c"
-  style="width: 600; height: 500;">
+<div name="motionchart" id="MotionChartID16fe55a7c15c" style="width: 600; height: 500;">
+<p></p>
 </div>
 
 
-<h2>Embending it in Latex</h2>
+<h2></h2>
+
+<h2>Embedding it in Latex/html</h2>
+
+<p>To embed the motion chart to a html based blog or slides are relatively straightforward -- you only need to copy and paste the html file we saved earlier to the desired source. However, adding it to Latex becomes a bit trickier. I have previously recorded it as a MPG4 and embedded it to latex as a movie using the <a href="http://ctan.mirrors.hoobly.com/macros/latex/contrib/animate/animate.pdf"><em>animate</em> package</a>. Otherwise, you can create a hyperlink to open the Motion Chart site page outside the latex presentation.</p>
+
+<p>But if you have a nice solution of presenting the motion chart in latex presentation, please let me know!</p>
 
 </div>
 
@@ -8935,8 +8973,8 @@ callbacks.shift()();
     
       <li>
         <h3>
-          <a href="/jekyll/2016/01/11/welcome-to-jekyll.html">
-            Welcome to Jekyll!
+          <a href="/web-proxy">
+            ssh web-proxy -- working outside work
             <small>11 Jan 2016</small>
           </a>
         </h3>
@@ -8944,9 +8982,9 @@ callbacks.shift()();
     
       <li>
         <h3>
-          <a href="/web-proxy">
-            ssh web-proxy -- working outside work
-            <small>11 Jan 2016</small>
+          <a href="/recursive-touch">
+            Recursive touch -- giving a new timestamp to your files
+            <small>11 Sep 2015</small>
           </a>
         </h3>
       </li>

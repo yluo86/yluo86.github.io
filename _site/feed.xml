@@ -5,15 +5,15 @@
     <description></description>
     <link>http://AiGene.com/</link>
     <atom:link href="http://AiGene.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 25 Feb 2016 13:19:01 -0500</pubDate>
-    <lastBuildDate>Thu, 25 Feb 2016 13:19:01 -0500</lastBuildDate>
+    <pubDate>Thu, 25 Feb 2016 14:19:15 -0500</pubDate>
+    <lastBuildDate>Thu, 25 Feb 2016 14:19:15 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Talk like Hans Rosling</title>
         <description>&lt;p&gt;Preparing a motivation slide is not always straightforward. Inspired by a recent read &lt;a href=&quot;http://www.amazon.com/Talk-Like-TED-Public-Speaking-Secrets/dp/1250041120&quot;&gt;Talk Like TED&lt;/a&gt;, I decided to add a bit of &#39;soul&#39; into the recent data on Tuberculosis (TB), and tell a story of how TB &#39;evolves&#39; in the past 25 years. Back in November 2012, I did a similar &lt;a href=&quot;http://wp.sanger.ac.uk/barrettgroup/2013/02/06/moving-from-common-to-rare/&quot;&gt;motivational slide&lt;/a&gt; using &lt;a href=&quot;https://github.com/mages/googleVis&quot;&gt;&lt;em&gt;googleVis&lt;/em&gt;&lt;/a&gt; based on the well-known Hans Rosling&#39;s popular 18-minutes &lt;a href=&quot;https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen&quot;&gt;TED talk&lt;/a&gt; in 2006 that has been viewed more than five million times.&lt;/p&gt;
 
-&lt;p&gt;In this blog, I will go into details of how I created the TB &lt;em&gt;motion chart&lt;/em&gt;, and maybe tell a story or two along the way.&lt;/p&gt;
+&lt;p&gt;In this blog, I will go into details of how I created the TB &lt;a href=&quot;##%20Motion%20chart%20creation&quot;&gt;&lt;em&gt;motion chart&lt;/em&gt;&lt;/a&gt;, and maybe tell a story or two along the way.&lt;/p&gt;
 
 &lt;h2&gt;Installation&lt;/h2&gt;
 
@@ -33,7 +33,48 @@ install_github(&quot;mages/googleVis&quot;)
 &lt;/ol&gt;
 
 
+&lt;pre&gt;&lt;code class=&quot;R&quot;&gt;library(googleVis)
+
+#load GDP data
+GDP&amp;lt;-read.csv(&quot;Data_Extract_From_World_Development_Indicators_Data.csv&quot;,h=T,stringsAsFactors = F,na.strings = &quot;..&quot;)
+
+#reshape the GDP data
+library(reshape)
+mdata&amp;lt;-melt(GDP,id=c(&quot;Country.Name&quot;))
+names(mdata)&amp;lt;-c(&quot;country&quot;,&quot;year&quot;,&quot;GDP_per_capita&quot;)
+mdata$year&amp;lt;-gsub(&quot;X&quot;, &quot;&quot;, mdata$year)
+
+# load TB burden data
+TB&amp;lt;-read.csv(&quot;TB_burden_countries_2016-02-18.csv&quot;,h=T,stringsAsFactors = F)
+
+#select picked country
+TB[TB$country==&quot;United States of America&quot;,]$country&amp;lt;-&quot;United States&quot;
+countries&amp;lt;-c(unique(TB[TB$g_whoregion==&quot;AMR&quot; &amp;amp; TB$country %in% GDP$Country.Name,]$country))
+df1&amp;lt;-mdata[mdata$country %in% countries,]
+
+df2&amp;lt;-subset(TB[TB$country %in% countries,],select=c(&quot;country&quot;,&quot;year&quot;,&quot;g_whoregion&quot;,&quot;e_pop_num&quot;,&quot;e_prev_100k&quot;,&quot;e_prev_num&quot;,&quot;e_mort_exc_tbhiv_100k&quot;,&quot;e_mort_exc_tbhiv_num&quot;,&quot;e_inc_num&quot;,&quot;e_inc_100k&quot;))
+
+#merge two dataset
+df&amp;lt;-merge(df1,df2,by=c(&quot;country&quot;,&quot;year&quot;))
+df$year&amp;lt;-as.numeric(df$year)
+df$GDP_per_capita&amp;lt;-as.numeric(df$GDP_per_capita)
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2&gt;Motion chart creation&lt;/h2&gt;
+
+&lt;p&gt;Now we are ready to create the Motion chart:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;R&quot;&gt;# Some customized options
+myState&amp;lt;-&#39;{&quot;iconKeySettings&quot;:[{&quot;key&quot;:{&quot;dim0&quot;:&quot;Peru&quot;}}, {&quot;key&quot;:{&quot;dim0&quot;:&quot;United States&quot;}}],&quot;colorOption&quot;:&quot;2&quot;,&quot;yAxisOption&quot;:&quot;7&quot;,&quot;xAxisOption&quot;:&quot;5&quot;,&quot;showTrails&quot;:false, &quot;sizeOption&quot;:&quot;8&quot;,&quot;showXScalePicker&quot;:false    }&#39;
+
+# create the chart
+Motion=gvisMotionChart(df,idvar=&quot;country&quot;,timevar=&quot;year&quot;,xvar=&quot;e_prev_100k&quot;,yvar=&quot;e_mort_exc_tbhiv_100k&quot;,colorvar=&quot;g_wholeregion&quot;,sizevar=&quot;e_prev_num&quot;,options=list(state=myState))
+
+# Plot it (this will open a html file in your web browser)
+plot(Motion)
+# save it as html
+cat(Motion$html$chart,file=&quot;MotionChart.html&quot;)
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;!-- MotionChart generated in R 3.2.2 by googleVis 0.5.10 package --&gt;
 
@@ -1546,7 +1587,7 @@ null,
 [
  &quot;Bermuda&quot;,
 2014,
-85748, 
+85748,
 62376,
 0,
 0,
@@ -8693,14 +8734,20 @@ callbacks.shift()();
 
 
 
-&lt;div id=&quot;MotionChartID16fe55a7c15c&quot;
-  style=&quot;width: 600; height: 500;&quot;&gt;
+&lt;div name=&quot;motionchart&quot; id=&quot;MotionChartID16fe55a7c15c&quot; style=&quot;width: 600; height: 500;&quot;&gt;
+&lt;p&gt;&lt;/p&gt;
 &lt;/div&gt;
 
 
-&lt;h2&gt;Embending it in Latex&lt;/h2&gt;
+&lt;h2&gt;&lt;/h2&gt;
+
+&lt;h2&gt;Embedding it in Latex/html&lt;/h2&gt;
+
+&lt;p&gt;To embed the motion chart to a html based blog or slides are relatively straightforward -- you only need to copy and paste the html file we saved earlier to the desired source. However, adding it to Latex becomes a bit trickier. I have previously recorded it as a MPG4 and embedded it to latex as a movie using the &lt;a href=&quot;http://ctan.mirrors.hoobly.com/macros/latex/contrib/animate/animate.pdf&quot;&gt;&lt;em&gt;animate&lt;/em&gt; package&lt;/a&gt;. Otherwise, you can create a hyperlink to open the Motion Chart site page outside the latex presentation.&lt;/p&gt;
+
+&lt;p&gt;But if you have a nice solution of presenting the motion chart in latex presentation, please let me know!&lt;/p&gt;
 </description>
-        <pubDate>Wed, 17 Feb 2016 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 25 Feb 2016 00:00:00 -0500</pubDate>
         <link>http://AiGene.com/MotionChart</link>
         <guid isPermaLink="true">http://AiGene.com/MotionChart</guid>
         
@@ -8768,31 +8815,6 @@ callbacks.shift()();
         
         
         <category>science</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;p&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/p&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 11 Jan 2016 15:11:17 -0500</pubDate>
-        <link>http://AiGene.com/jekyll/2016/01/11/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://AiGene.com/jekyll/2016/01/11/welcome-to-jekyll.html</guid>
-        
-        
-        <category>jekyll</category>
         
       </item>
     

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Talk like Hans Rosling"
-date:   2016-02-17
+date:   2016-02-25
 categories: presentation
 tags: bioinformatics motionchart R
 author: Yang
@@ -10,7 +10,7 @@ permalink: MotionChart
 
 Preparing a motivation slide is not always straightforward. Inspired by a recent read [Talk Like TED](http://www.amazon.com/Talk-Like-TED-Public-Speaking-Secrets/dp/1250041120), I decided to add a bit of 'soul' into the recent data on Tuberculosis (TB), and tell a story of how TB 'evolves' in the past 25 years. Back in November 2012, I did a similar [motivational slide](http://wp.sanger.ac.uk/barrettgroup/2013/02/06/moving-from-common-to-rare/) using [*googleVis*](https://github.com/mages/googleVis) based on the well-known Hans Rosling's popular 18-minutes [TED talk](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen) in 2006 that has been viewed more than five million times.
 
-In this blog, I will go into details of how I created the TB *motion chart*, and maybe tell a story or two along the way.
+In this blog, I will go into details of how I created the TB [*motion chart*](## Motion chart creation), and maybe tell a story or two along the way.
 
 ## Installation
 Assume you a R user, here's how to install the development version of *googleVis* from github and its dependencies.
@@ -25,7 +25,49 @@ install_github("mages/googleVis")
 2. Download worldwide GDP per capita statistics from [the World Bank](http://databank.worldbank.org/data/reports.aspx?source=2&type=metadata&series=NY.GDP.PCAP.CD#)
 3. Merge the two dataset
 
+```R
+library(googleVis)
+
+#load GDP data
+GDP<-read.csv("Data_Extract_From_World_Development_Indicators_Data.csv",h=T,stringsAsFactors = F,na.strings = "..")
+
+#reshape the GDP data
+library(reshape)
+mdata<-melt(GDP,id=c("Country.Name"))
+names(mdata)<-c("country","year","GDP_per_capita")
+mdata$year<-gsub("X", "", mdata$year)
+
+# load TB burden data
+TB<-read.csv("TB_burden_countries_2016-02-18.csv",h=T,stringsAsFactors = F)
+
+#select picked country
+TB[TB$country=="United States of America",]$country<-"United States"
+countries<-c(unique(TB[TB$g_whoregion=="AMR" & TB$country %in% GDP$Country.Name,]$country))
+df1<-mdata[mdata$country %in% countries,]
+
+df2<-subset(TB[TB$country %in% countries,],select=c("country","year","g_whoregion","e_pop_num","e_prev_100k","e_prev_num","e_mort_exc_tbhiv_100k","e_mort_exc_tbhiv_num","e_inc_num","e_inc_100k"))
+
+#merge two dataset
+df<-merge(df1,df2,by=c("country","year"))
+df$year<-as.numeric(df$year)
+df$GDP_per_capita<-as.numeric(df$GDP_per_capita)
+```
+
 ## Motion chart creation
+Now we are ready to create the Motion chart:
+
+```R
+# Some customized options
+myState<-'{"iconKeySettings":[{"key":{"dim0":"Peru"}}, {"key":{"dim0":"United States"}}],"colorOption":"2","yAxisOption":"7","xAxisOption":"5","showTrails":false, "sizeOption":"8","showXScalePicker":false	}'
+
+# create the chart
+Motion=gvisMotionChart(df,idvar="country",timevar="year",xvar="e_prev_100k",yvar="e_mort_exc_tbhiv_100k",colorvar="g_wholeregion",sizevar="e_prev_num",options=list(state=myState))
+
+# Plot it (this will open a html file in your web browser)
+plot(Motion)
+# save it as html
+cat(Motion$html$chart,file="MotionChart.html")
+```
 <!-- MotionChart generated in R 3.2.2 by googleVis 0.5.10 package -->
 <!-- Thu Feb 18 16:53:39 2016 -->
 
@@ -1531,7 +1573,7 @@ null,
 [
  "Bermuda",
 2014,
-85748, 
+85748,
 62376,
 0,
 0,
@@ -8665,8 +8707,14 @@ callbacks.shift()();
 
 <!-- divChart -->
 
-<div id="MotionChartID16fe55a7c15c"
-  style="width: 600; height: 500;">
+<div name="motionchart" id="MotionChartID16fe55a7c15c" style="width: 600; height: 500;">
+<p></p>
 </div>
 
-## Embending it in Latex
+##  
+
+## Embedding it in Latex/html
+
+To embed the motion chart to a html based blog or slides are relatively straightforward -- you only need to copy and paste the html file we saved earlier to the desired source. However, adding it to Latex becomes a bit trickier. I have previously recorded it as a MPG4 and embedded it to latex as a movie using the [*animate* package](http://ctan.mirrors.hoobly.com/macros/latex/contrib/animate/animate.pdf). Otherwise, you can create a hyperlink to open the Motion Chart site page outside the latex presentation.
+
+But if you have a nice solution of presenting the motion chart in latex presentation, please let me know!
