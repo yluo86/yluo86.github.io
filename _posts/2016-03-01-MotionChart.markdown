@@ -20,10 +20,12 @@ install.packages(c("devtools","RJSONIO", "knitr", "shiny", "httpuv"))
 library(devtools)
 install_github("mages/googleVis")
 ```
+
 ## Data preparation
-  1. Download TB burden estimates from [WHO](https://extranet.who.int/tme/generateCSV.asp?ds=estimates)
-  2. Download worldwide GDP per capita statistics from [the World Bank](http://databank.worldbank.org/data/reports.aspx?source=2&type=metadata&series=NY.GDP.PCAP.CD#)
-  3. Merge the two dataset
+
+  1.  Download TB burden estimates from [WHO](https://extranet.who.int/tme/generateCSV.asp?ds=estimates)
+  2.  Download worldwide GDP per capita statistics from [the World Bank](http://databank.worldbank.org/data/reports.aspx?source=2&type=metadata&series=NY.GDP.PCAP.CD#)
+  3.  Merge the two dataset
 
 ```R
 library(googleVis)
