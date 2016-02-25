@@ -15,7 +15,7 @@ twitter_username: yluo86
 github_username:  yluo86
 
 # Build settings
-#markdown: kramdown
+markdown: kramdown
 #markdown: rdiscount #fix nested list in Markdown
 
 # Permalinks
