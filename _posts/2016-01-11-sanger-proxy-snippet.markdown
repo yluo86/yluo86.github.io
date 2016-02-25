@@ -16,7 +16,7 @@ ssh -L3128:cache1a.internal.sanger.ac.uk:3128 USERNAME@ssh.sanger.ac.uk
 
 # 2. Change the proxy settings in the web browser to, the figure below shows a screen shot of my setting in Firefox
 
-<img src="..//assets/images/firefox_proxy_setting.png" alt="firefox_proxy_setting" width=50%>
+<img src="../assets/images/firefox_proxy_setting.png" alt="firefox_proxy_setting" width=50%>
 
 # Feeling lazy..
 After doing this for a while, instead of typing the ssh command ever time, I created a tunnel set up in my config file `~/.ssh/config` and save some typing effort
