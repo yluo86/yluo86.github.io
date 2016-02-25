@@ -1,0 +1,50 @@
+<div class="sidebar">
+	<div>
+
+
+		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Categories</a>
+		<ul>
+			{% for category in site.categories %}
+			<li>
+				<a onclick="redirect('/categories.html#{{ category[0] }}')">
+				{% if page.categories contains category[0] %}
+				<b>{{ category[0] }}</b>
+				{% else %}
+					{{ category[0] }}
+				{% endif %}
+				</a>
+				<sup>[{{ category[1].size }}]</sup>
+			</li>
+			{% endfor %}
+		</ul>
+		<hr/>
+		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Tags</a>
+		<ul class="sidebar_tags">
+			{% for tag in site.tags %}
+<!-- 			<li> -->
+				<a onclick="redirect('/tags.html#{{ tag[0] }}')">
+<!-- 				<a href="/blog/tag/testtag#{{ tag[0] }}"> -->
+				{% if page.tags contains tag[0] %}
+					<b>{{tag[0]}}</b>
+				{% else %}
+					{{ tag[0] }}
+				{% endif %}
+				</a>
+				<sup>[{{ tag[1].size }}]</sup>
+
+<!-- 			</li> -->
+			{% endfor %}
+		</ul>
+		<hr/>
+	</div>
+</div>
+
+<script type="text/javascript">
+	function redirect(url){
+		//alert(url);
+		window.history.pushState('test', "Title", url);
+		//window.location.href=url;
+		window.location.reload();
+	}
+
+</script>

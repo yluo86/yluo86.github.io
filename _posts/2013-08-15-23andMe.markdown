@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "Is there a little bit of Korean in me"
+date:   2013-08-15
+categories: science
+tags: 23andme ancestry
+author: Yang
+permalink: 23andMe
+---
+
+Recently I had my DNA genotyped by 23andMe. After working at Sanger for two years, I had been looking forward to finding out what my own genome had to say about myself, particularly regarding my ancestry. I am from Beijing and both of my parents are ethnically Han Chinese – the largest ethnic group which accounts for 92% population in China. Having witnessed my colleagues’ surprise at finding French, Ashkenazi and Scandinavian ancestry in their own DNA data, I could not help but get my hopes up to discover some surprising elements in my own ATGCs.
+
+23andmeHowever, 23andMe left me feeling a little underwhelmed. Its ancestry analysis told me I’m 99.4% East Asian and Native American, a little like finding out that beef is 99.4% cow (something you can not always take from granted in the UK). Compared with the detailed breakdown you receive if you are European, such a vague composition is rather disappointing. Luckily, with a bit of experience in analysing genotype data, I could try other means. I combined my genotype with the east Asian cohort from our Inflammatory Bowel Disease (IBD) studies, and did a standard Principal Component Analysis (PCA) using WDIST, an experimental rewrite of the PLINK command-line tool which benefits from a vastly improved speed-up of the Identity-by-descent (—genome) calculation.
+
+IBD-PCALooking at the bright yellow dot in the IBD-PCA plot — I am right in between China and Korea! Maybe I am related to Korean? In fact, my mother’s family name ‘Cui’( 崔 ) is a common surname for the Korean ethnic group in China. There are roughly two million people in China with Korean ethnicity, most of whom are resident in Northeast China. My mum’s side of the family is from Liaoning province, one of the three provinces where most of the ethnic Korean population lives. The distances between Liaoning, Korea and Japan seem to support what my DNA is trying to tell me. Without further ado, I called my family to ask if there were any family secrets to share. Rather disappointingly (for me), none of them had any stories to support my hypothesis and they were quite confident that we are 100% Han Chinese.
+map
+
+Probing further, I also used the online tool interpretome to see where my genome lies using the Human Genome Diversity Project (HGDP). Even though no Korean population was included in HGDP, the HGDP-PCA still indicates that I am much closer to Japanese descent than the average Han person.
+HGDPdetailed-HGDP
+
+Depending on what populations and which SNPs have been included in a study, the plots can vary quit a bit. It is suspicious that the Chinese population is more tightly clustered than the Japanese, which is less than 10% of its size and much more geographically concentrated. Could my ‘relatedness’ to Korean be due to a relatively small Chinese sample size? Indeed, after talking to Jeff, I confirmed most of our IBD samples are collected from Hong Kong (southern China). Could a sample from the northern Han Chinese population bridge the geographical and genetic gap? To test this hypothesis, I combined an additional 137 Han Chinese collected from Beijing in Hapmap3 to the IBD dataset, and re-ran the PCA. The new plot clearly shows a fourth cluster of Northern Han Chinese that lies between Southern Chinese and Korean, and I am right in the middle of it!
+
+While the result is perhaps expected, it is still amazing to see the relationships between genetics and geography in this manner. Culture, language, history and politics may separate two countries, but from a genetic point of view, my fellow countrymen may be further from me than our most “foreign” of neighbours.
+Even though I didn’t unravel any untold stories about my family history in the end, the little genomic voyage was fun and I do hope that not far in the future there will be a more concerted effort to gather genome data from the Eastern Asian populations, not just for the purpose of genealogy, but also for the many other benefits that this data can bring.

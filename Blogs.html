@@ -1,0 +1,45 @@
+---
+layout: default
+title: Blogs
+---
+<div>
+{% assign howMany = pagesToShow or 20 %}
+{% for post in site.posts limit:howMany %}
+
+<h2><a href="{{post.url}}">{{post.title}} - {{post.date|date: "%b %d,%Y"}}</a></h2>
+<!--
+<div class="tags">
+{% if post.categories[0] %}
+  {% for c in post.categories %}
+  <a class="category" href="/categories.html#{{c}}">{{c}}</a>
+  {% endfor %}
+{% if post.tags[0] %} - {% endif %}
+{% endif %}
+</div>
+//-->
+{% if post.categories[0] or post.tags[0] %}
+{% endif %}
+<div class="excerpt">
+
+{% if post.summary %}
+{{ post.summary|newline_to_br }}
+{% else %}
+{% if post.language == 'en' %}
+
+{{post.content|strip_html|truncatewords:100|newline_to_br}}
+{% else %}
+{{post.content|strip_html|truncate: 220|newline_to_br}}
+{% endif %}
+{% endif %}
+<p></p>
+<span><a href="{{post.url}}"> [ Read more ] </a></span>
+
+<p></p>
+</div>
+
+
+
+{% endfor %}
+{% assign pagesToShow = nil %}
+{% assign howMany = nil %}
+</div>
