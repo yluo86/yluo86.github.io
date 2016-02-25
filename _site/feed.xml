@@ -5,8 +5,8 @@
     <description></description>
     <link>http://AiGene.com/</link>
     <atom:link href="http://AiGene.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 25 Feb 2016 14:48:32 -0500</pubDate>
-    <lastBuildDate>Thu, 25 Feb 2016 14:48:32 -0500</lastBuildDate>
+    <pubDate>Thu, 25 Feb 2016 15:07:46 -0500</pubDate>
+    <lastBuildDate>Thu, 25 Feb 2016 15:07:46 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -8828,7 +8828,7 @@ callbacks.shift()();
 
 &lt;h1&gt;2. Change the proxy settings in the web browser to, the figure below shows a screen shot of my setting in Firefox&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/firefox_proxy_setting.png&quot; alt=&quot;firefox_proxy_setting&quot; width=50%&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/firefox_proxy_setting.png&quot; alt=&quot;firefox_proxy_setting&quot; width=50%&gt;&lt;/p&gt;
 
 &lt;h1&gt;Feeling lazy..&lt;/h1&gt;
 

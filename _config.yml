@@ -9,7 +9,7 @@
 title: AiGenome
 email: yangluo86@gmail.com
 description: > # Blogging on genomics, bioinformatics, news, pipelines and ideas.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/yluo86.github.io/" # the subpath of your site, e.g. /blog
 url: "http://AiGene.com" # the base hostname & protocol for your site
 twitter_username: yluo86
 github_username:  yluo86
