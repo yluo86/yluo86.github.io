@@ -2,8 +2,8 @@
 layout: post
 title:  "Poster for ASHG 2016"
 date:   2016-10-11
-categories: science,conference
-tags: poster, conference, ASHG
+categories: science presentation
+tags: poster conference ASHG
 author: Yang
 permalink: ashg2016
 ---
@@ -12,4 +12,4 @@ My poster for ASHG 2016 titled "A customized genotype array to investigate the g
 
 You can download the high-resolution PDF file [ASHG poster]({{ site.baseurl }}/assets/images/ASHG2016.pdf)  here.
 
-![ASHG poster pdf]({{ site.baseurl }}/assets/images/ashg.png)
+![ASHG poster pdf]({{ site.baseurl }}/assets/images/ashg2016.png)

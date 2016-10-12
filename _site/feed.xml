@@ -3,90 +3,107 @@
   <channel>
     <title>AiGenome</title>
     <description></description>
-    <link>http://AiGene.com/</link>
-    <atom:link href="http://AiGene.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 25 Feb 2016 15:07:46 -0500</pubDate>
-    <lastBuildDate>Thu, 25 Feb 2016 15:07:46 -0500</lastBuildDate>
-    <generator>Jekyll v3.0.1</generator>
+    <link>http://AiGene.com/yluo86.github.io//</link>
+    <atom:link href="http://AiGene.com/yluo86.github.io//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 12 Oct 2016 17:16:50 -0400</pubDate>
+    <lastBuildDate>Wed, 12 Oct 2016 17:16:50 -0400</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Poster for ASHG 2016</title>
+        <description>&lt;p&gt;My poster for ASHG 2016 titled “A customized genotype array to investigate the genetic architecture of tuberculosis in Peru” shows how we utilized information from whole exome sequencing and whole genome sequencing of Peruvian individuals to design a customized arrow that tailored for Peruvian populations.&lt;/p&gt;
+
+&lt;p&gt;You can download the high-resolution PDF file &lt;a href=&quot;/yluo86.github.io//assets/images/ASHG2016.pdf&quot;&gt;ASHG poster&lt;/a&gt;  here.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/yluo86.github.io//assets/images/ashg2016.png&quot; alt=&quot;ASHG poster pdf&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 11 Oct 2016 00:00:00 -0400</pubDate>
+        <link>http://AiGene.com/yluo86.github.io//ashg2016</link>
+        <guid isPermaLink="true">http://AiGene.com/yluo86.github.io//ashg2016</guid>
+        
+        <category>poster</category>
+        
+        <category>conference</category>
+        
+        <category>ASHG</category>
+        
+        
+        <category>science</category>
+        
+        <category>presentation</category>
+        
+      </item>
     
       <item>
         <title>Talk like Hans Rosling</title>
-        <description>&lt;p&gt;Preparing a motivation slide is not always straightforward. Inspired by a recent read &lt;a href=&quot;http://www.amazon.com/Talk-Like-TED-Public-Speaking-Secrets/dp/1250041120&quot;&gt;Talk Like TED&lt;/a&gt;, I decided to add a bit of &#39;soul&#39; into the recent data on Tuberculosis (TB), and tell a story of how TB &#39;evolves&#39; in the past 25 years. Back in November 2012, I did a similar &lt;a href=&quot;http://wp.sanger.ac.uk/barrettgroup/2013/02/06/moving-from-common-to-rare/&quot;&gt;motivational slide&lt;/a&gt; using &lt;a href=&quot;https://github.com/mages/googleVis&quot;&gt;&lt;em&gt;googleVis&lt;/em&gt;&lt;/a&gt; based on the well-known Hans Rosling&#39;s popular 18-minutes &lt;a href=&quot;https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen&quot;&gt;TED talk&lt;/a&gt; in 2006 that has been viewed more than five million times.&lt;/p&gt;
+        <description>&lt;p&gt;Preparing a motivation slide is not always straightforward. Inspired by a recent read &lt;a href=&quot;http://www.amazon.com/Talk-Like-TED-Public-Speaking-Secrets/dp/1250041120&quot;&gt;Talk Like TED&lt;/a&gt;, I decided to add a bit of ‘soul’ into the recent data on Tuberculosis (TB), and tell a story of how TB ‘evolves’ in the past 25 years. Back in November 2012, I did a similar &lt;a href=&quot;http://wp.sanger.ac.uk/barrettgroup/2013/02/06/moving-from-common-to-rare/&quot;&gt;motivational slide&lt;/a&gt; using &lt;a href=&quot;https://github.com/mages/googleVis&quot;&gt;&lt;em&gt;googleVis&lt;/em&gt;&lt;/a&gt; based on the well-known Hans Rosling’s popular 18-minutes &lt;a href=&quot;https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen&quot;&gt;TED talk&lt;/a&gt; in 2006 that has been viewed more than five million times.&lt;/p&gt;
 
-&lt;p&gt;In this blog, I will go into details of how I created the TB &lt;a href=&quot;##%20Motion%20chart%20creation&quot;&gt;&lt;em&gt;motion chart&lt;/em&gt;&lt;/a&gt;, and maybe tell a story or two along the way.&lt;/p&gt;
+&lt;p&gt;In this blog, I will go into details of how I created the TB &lt;a href=&quot;## Motion chart creation&quot;&gt;&lt;em&gt;motion chart&lt;/em&gt;&lt;/a&gt;, and maybe tell a story or two along the way.&lt;/p&gt;
 
-&lt;h2&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;Assume you a R user, here’s how to install the development version of &lt;em&gt;googleVis&lt;/em&gt; from github and its dependencies.&lt;/p&gt;
 
-&lt;p&gt;Assume you a R user, here&#39;s how to install the development version of &lt;em&gt;googleVis&lt;/em&gt; from github and its dependencies.&lt;/p&gt;
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;install.packages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;devtools&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;RJSONIO&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;knitr&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;shiny&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;httpuv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;devtools&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install_github&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;mages/googleVis&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;pre&gt;&lt;code class=&quot;R&quot;&gt;install.packages(c(&quot;devtools&quot;,&quot;RJSONIO&quot;, &quot;knitr&quot;, &quot;shiny&quot;, &quot;httpuv&quot;))  
-library(devtools)
-install_github(&quot;mages/googleVis&quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2&gt;Data preparation&lt;/h2&gt;
+&lt;h2 id=&quot;data-preparation&quot;&gt;Data preparation&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Download TB burden estimates from &lt;a href=&quot;https://extranet.who.int/tme/generateCSV.asp?ds=estimates&quot;&gt;WHO&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Download worldwide GDP per capita statistics from &lt;a href=&quot;http://databank.worldbank.org/data/reports.aspx?source=2&amp;amp;type=metadata&amp;amp;series=NY.GDP.PCAP.CD#&quot;&gt;the World Bank&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Merge the two dataset&lt;/li&gt;
+  &lt;li&gt;Download TB burden estimates from &lt;a href=&quot;https://extranet.who.int/tme/generateCSV.asp?ds=estimates&quot;&gt;WHO&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Download worldwide GDP per capita statistics from &lt;a href=&quot;http://databank.worldbank.org/data/reports.aspx?source=2&amp;amp;type=metadata&amp;amp;series=NY.GDP.PCAP.CD#&quot;&gt;the World Bank&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Merge the two dataset&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;googleVis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-&lt;pre&gt;&lt;code class=&quot;R&quot;&gt;library(googleVis)
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#load GDP data
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GDP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read.csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Data_Extract_From_World_Development_Indicators_Data.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stringsAsFactors&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;na.strings&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;..&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-#load GDP data
-GDP&amp;lt;-read.csv(&quot;Data_Extract_From_World_Development_Indicators_Data.csv&quot;,h=T,stringsAsFactors = F,na.strings = &quot;..&quot;)
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#reshape the GDP data
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reshape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mdata&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;melt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GDP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Country.Name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mdata&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;country&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;year&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;GDP_per_capita&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mdata&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gsub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;X&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mdata&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-#reshape the GDP data
-library(reshape)
-mdata&amp;lt;-melt(GDP,id=c(&quot;Country.Name&quot;))
-names(mdata)&amp;lt;-c(&quot;country&quot;,&quot;year&quot;,&quot;GDP_per_capita&quot;)
-mdata$year&amp;lt;-gsub(&quot;X&quot;, &quot;&quot;, mdata$year)
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# load TB burden data
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read.csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;TB_burden_countries_2016-02-18.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stringsAsFactors&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-# load TB burden data
-TB&amp;lt;-read.csv(&quot;TB_burden_countries_2016-02-18.csv&quot;,h=T,stringsAsFactors = F)
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#select picked country
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;country&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;United States of America&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;country&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;United States&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;countries&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unique&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g_whoregion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;AMR&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;country&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GDP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Country.Name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;country&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mdata&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mdata&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;country&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;countries&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-#select picked country
-TB[TB$country==&quot;United States of America&quot;,]$country&amp;lt;-&quot;United States&quot;
-countries&amp;lt;-c(unique(TB[TB$g_whoregion==&quot;AMR&quot; &amp;amp; TB$country %in% GDP$Country.Name,]$country))
-df1&amp;lt;-mdata[mdata$country %in% countries,]
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;country&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;countries&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;country&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;year&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;g_whoregion&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;e_pop_num&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;e_prev_100k&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;e_prev_num&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;e_mort_exc_tbhiv_100k&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;e_mort_exc_tbhiv_num&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;e_inc_num&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;e_inc_100k&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-df2&amp;lt;-subset(TB[TB$country %in% countries,],select=c(&quot;country&quot;,&quot;year&quot;,&quot;g_whoregion&quot;,&quot;e_pop_num&quot;,&quot;e_prev_100k&quot;,&quot;e_prev_num&quot;,&quot;e_mort_exc_tbhiv_100k&quot;,&quot;e_mort_exc_tbhiv_num&quot;,&quot;e_inc_num&quot;,&quot;e_inc_100k&quot;))
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#merge two dataset
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;by&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;country&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;year&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;as.numeric&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GDP_per_capita&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;as.numeric&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GDP_per_capita&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-#merge two dataset
-df&amp;lt;-merge(df1,df2,by=c(&quot;country&quot;,&quot;year&quot;))
-df$year&amp;lt;-as.numeric(df$year)
-df$GDP_per_capita&amp;lt;-as.numeric(df$GDP_per_capita)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2&gt;Motion chart creation&lt;/h2&gt;
-
+&lt;h2 id=&quot;motion-chart-creation&quot;&gt;Motion chart creation&lt;/h2&gt;
 &lt;p&gt;Now we are ready to create the Motion chart:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;R&quot;&gt;# Some customized options
-myState&amp;lt;-&#39;{&quot;iconKeySettings&quot;:[{&quot;key&quot;:{&quot;dim0&quot;:&quot;Peru&quot;}}, {&quot;key&quot;:{&quot;dim0&quot;:&quot;United States&quot;}}],&quot;colorOption&quot;:&quot;2&quot;,&quot;yAxisOption&quot;:&quot;7&quot;,&quot;xAxisOption&quot;:&quot;5&quot;,&quot;showTrails&quot;:false, &quot;sizeOption&quot;:&quot;8&quot;,&quot;showXScalePicker&quot;:false    }&#39;
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Some customized options
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;myState&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'{&quot;iconKeySettings&quot;:[{&quot;key&quot;:{&quot;dim0&quot;:&quot;Peru&quot;}}, {&quot;key&quot;:{&quot;dim0&quot;:&quot;United States&quot;}}],&quot;colorOption&quot;:&quot;2&quot;,&quot;yAxisOption&quot;:&quot;7&quot;,&quot;xAxisOption&quot;:&quot;5&quot;,&quot;showTrails&quot;:false, &quot;sizeOption&quot;:&quot;8&quot;,&quot;showXScalePicker&quot;:false	}'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-# create the chart
-Motion=gvisMotionChart(df,idvar=&quot;country&quot;,timevar=&quot;year&quot;,xvar=&quot;e_prev_100k&quot;,yvar=&quot;e_mort_exc_tbhiv_100k&quot;,colorvar=&quot;g_wholeregion&quot;,sizevar=&quot;e_prev_num&quot;,options=list(state=myState))
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# create the chart
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Motion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gvisMotionChart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idvar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;country&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timevar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;year&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xvar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;e_prev_100k&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yvar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;e_mort_exc_tbhiv_100k&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;colorvar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;g_wholeregion&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sizevar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;e_prev_num&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;myState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-# Plot it (this will open a html file in your web browser)
-plot(Motion)
-# save it as html
-cat(Motion$html$chart,file=&quot;MotionChart.html&quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Plot it (this will open a html file in your web browser)
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Motion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# save it as html
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Motion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;MotionChart.html&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;!-- MotionChart generated in R 3.2.2 by googleVis 0.5.10 package --&gt;
-
-
 &lt;!-- Thu Feb 18 16:53:39 2016 --&gt;
 
-
-
-
 &lt;!-- jsHeader --&gt;
-
-
 &lt;script type=&quot;text/javascript&quot;&gt;
 
 // jsData
@@ -8645,14 +8662,14 @@ null,
 57
 ]
 ];
-data.addColumn(&#39;string&#39;,&#39;Country&#39;);
-data.addColumn(&#39;number&#39;,&#39;Year&#39;);
-data.addColumn(&#39;number&#39;,&#39;GDP per capita&#39;);
-data.addColumn(&#39;number&#39;,&#39;Total Population&#39;);
-data.addColumn(&#39;number&#39;,&#39;Prevalence of TB per 100 000&#39;);
-data.addColumn(&#39;number&#39;,&#39;Prevalence of TB&#39;);
-data.addColumn(&#39;number&#39;,&#39;Mortality of TB per 100,000 (excluding HIV)&#39;);
-data.addColumn(&#39;number&#39;,&#39;Mortality of TB (excluding HIV)&#39;);
+data.addColumn('string','Country');
+data.addColumn('number','Year');
+data.addColumn('number','GDP per capita');
+data.addColumn('number','Total Population');
+data.addColumn('number','Prevalence of TB per 100 000');
+data.addColumn('number','Prevalence of TB');
+data.addColumn('number','Mortality of TB per 100,000 (excluding HIV)');
+data.addColumn('number','Mortality of TB (excluding HIV)');
 data.addRows(datajson);
 return(data);
 }
@@ -8667,7 +8684,7 @@ options[&quot;state&quot;] = &quot;\n{\&quot;xAxisOption\&quot;:\&quot;4\&quot;,
 
 
     var chart = new google.visualization.MotionChart(
-    document.getElementById(&#39;MotionChartID16fe55a7c15c&#39;)
+    document.getElementById('MotionChartID16fe55a7c15c')
     );
     chart.draw(data,options);
 
@@ -8716,40 +8733,26 @@ callbacks.shift()();
 // jsFooter
 &lt;/script&gt;
 
-
-
-
 &lt;!-- jsChart --&gt;
-
-
-&lt;p&gt;&lt;/p&gt;
-
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://www.google.com/jsapi?callback=displayChartMotionChartID16fe55a7c15c&quot;&gt;&lt;/script&gt;
 
-
-
-
 &lt;!-- divChart --&gt;
-
-
-
 
 &lt;div name=&quot;motionchart&quot; id=&quot;MotionChartID16fe55a7c15c&quot; style=&quot;width: 600; height: 500;&quot;&gt;
 &lt;p&gt;&lt;/p&gt;
 &lt;/div&gt;
 
+&lt;p&gt;##&lt;/p&gt;
 
-&lt;h2&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;embedding-it-in-latexhtml&quot;&gt;Embedding it in Latex/html&lt;/h2&gt;
 
-&lt;h2&gt;Embedding it in Latex/html&lt;/h2&gt;
-
-&lt;p&gt;To embed the motion chart to a html based blog or slides are relatively straightforward -- you only need to copy and paste the html file we saved earlier to the desired source. However, adding it to Latex becomes a bit trickier. I have previously recorded it as a MPG4 and embedded it to latex as a movie using the &lt;a href=&quot;http://ctan.mirrors.hoobly.com/macros/latex/contrib/animate/animate.pdf&quot;&gt;&lt;em&gt;animate&lt;/em&gt; package&lt;/a&gt;. Otherwise, you can create a hyperlink to open the Motion Chart site page outside the latex presentation.&lt;/p&gt;
+&lt;p&gt;To embed the motion chart to a html based blog or slides are relatively straightforward – you only need to copy and paste the html file we saved earlier to the desired source. However, adding it to Latex becomes a bit trickier. I have previously recorded it as a MPG4 and embedded it to latex as a movie using the &lt;a href=&quot;http://ctan.mirrors.hoobly.com/macros/latex/contrib/animate/animate.pdf&quot;&gt;&lt;em&gt;animate&lt;/em&gt; package&lt;/a&gt;. Otherwise, you can create a hyperlink to open the Motion Chart site page outside the latex presentation.&lt;/p&gt;
 
 &lt;p&gt;But if you have a nice solution of presenting the motion chart in latex presentation, please let me know!&lt;/p&gt;
 </description>
         <pubDate>Thu, 25 Feb 2016 00:00:00 -0500</pubDate>
-        <link>http://AiGene.com/MotionChart</link>
-        <guid isPermaLink="true">http://AiGene.com/MotionChart</guid>
+        <link>http://AiGene.com/yluo86.github.io//MotionChart</link>
+        <guid isPermaLink="true">http://AiGene.com/yluo86.github.io//MotionChart</guid>
         
         <category>bioinformatics</category>
         
@@ -8766,46 +8769,40 @@ callbacks.shift()();
         <title>Pipeline for genotype array design</title>
         <description>&lt;p&gt;Recently in my work, I need to undergo a genome-wide association study in Peruvian population. Since most of the commercial genotype arrays are designed targeting primarily at European population. If you are also interested in either evaluating the coverage of the current commercial array for a particular dataset/population, or putting customized content in an existing chip specific to a population in order to improve coverage, this might a helpful post for you.&lt;/p&gt;
 
-&lt;h1&gt;What to put on the chip&lt;/h1&gt;
-
+&lt;h1 id=&quot;what-to-put-on-the-chip&quot;&gt;What to put on the chip&lt;/h1&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Preselect set&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Commercial array contents: this can be any commercially available arrays, e.g. Affy6.0, Axiom, Illumina2.5, etc.&lt;/li&gt;
-&lt;li&gt;Markers of interest: this can be signals from GWAS studies, HLA regions, eQTL or any other sources of interest.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Additional content&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Aims
-
-&lt;ol&gt;
-&lt;li&gt;include as many variants as possible based on
-
-&lt;ul&gt;
-&lt;li&gt;Low-coverage whole genome sequencing data (1000GP)&lt;/li&gt;
-&lt;li&gt;Exome-sequencing data (from own dataset)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;r&lt;sup&gt;2&lt;/sup&gt; &gt; 0.8&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
+  &lt;li&gt;Preselect set
+    &lt;ol&gt;
+      &lt;li&gt;Commercial array contents: this can be any commercially available arrays, e.g. Affy6.0, Axiom, Illumina2.5, etc.&lt;/li&gt;
+      &lt;li&gt;Markers of interest: this can be signals from GWAS studies, HLA regions, eQTL or any other sources of interest.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Additional content
+    &lt;ol&gt;
+      &lt;li&gt;Aims
+        &lt;ol&gt;
+          &lt;li&gt;include as many variants as possible based on
+            &lt;ul&gt;
+              &lt;li&gt;Low-coverage whole genome sequencing data (1000GP)&lt;/li&gt;
+              &lt;li&gt;Exome-sequencing data (from own dataset)&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;r^2 &amp;gt; 0.8&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;p&gt;You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we’ll use three here to also align the raw Markdown).&lt;/p&gt;
 
-&lt;p&gt;  You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we&#39;ll use three here to also align the raw Markdown).&lt;/p&gt;
-
-&lt;p&gt;  To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+&lt;p&gt;To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
   Note that this line is separate, but within the same paragraph.⋅⋅
    (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)&lt;/p&gt;
 </description>
         <pubDate>Tue, 12 Jan 2016 10:11:17 -0500</pubDate>
-        <link>http://AiGene.com/array-design</link>
-        <guid isPermaLink="true">http://AiGene.com/array-design</guid>
+        <link>http://AiGene.com/yluo86.github.io//array-design</link>
+        <guid isPermaLink="true">http://AiGene.com/yluo86.github.io//array-design</guid>
         
         <category>GWAS</category>
         
@@ -8822,30 +8819,29 @@ callbacks.shift()();
         <title>ssh web-proxy -- working outside work</title>
         <description>&lt;p&gt;I recently moved to Boston from Sanger Institute, and had to access an internal website from a new laptop. This is the snippets of how to set it up, and generally speaking, it should work for any web proxy as long as you have a valid ssh login.&lt;/p&gt;
 
-&lt;h1&gt;1. ssh from your terminal window:&lt;/h1&gt;
+&lt;h1 id=&quot;ssh-from-your-terminal-window&quot;&gt;1. ssh from your terminal window:&lt;/h1&gt;
 
-&lt;p&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ssh -L3128:cache1a.internal.sanger.ac.uk:3128 USERNAME@ssh.sanger.ac.uk&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ssh -L3128:cache1a.internal.sanger.ac.uk:3128 USERNAME@ssh.sanger.ac.uk&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h1&gt;2. Change the proxy settings in the web browser to, the figure below shows a screen shot of my setting in Firefox&lt;/h1&gt;
+&lt;h1 id=&quot;change-the-proxy-settings-in-the-web-browser-to-the-figure-below-shows-a-screen-shot-of-my-setting-in-firefox&quot;&gt;2. Change the proxy settings in the web browser to, the figure below shows a screen shot of my setting in Firefox&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/firefox_proxy_setting.png&quot; alt=&quot;firefox_proxy_setting&quot; width=50%&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/yluo86.github.io//assets/images/firefox_proxy_setting.png&quot; alt=&quot;Proxy setting&quot; /&gt;&lt;/p&gt;
 
-&lt;h1&gt;Feeling lazy..&lt;/h1&gt;
+&lt;h1 id=&quot;feeling-lazy&quot;&gt;Feeling lazy..&lt;/h1&gt;
+&lt;p&gt;After doing this for a while, instead of typing the ssh command ever time, I created a tunnel set up in my config file &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.ssh/config&lt;/code&gt; and save some typing effort&lt;/p&gt;
 
-&lt;p&gt;After doing this for a while, instead of typing the ssh command ever time, I created a tunnel set up in my config file &lt;code&gt;~/.ssh/config&lt;/code&gt; and save some typing effort&lt;/p&gt;
-
-&lt;p&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Host Sanger_web
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Host Sanger_web
 Hostname ssh.sanger.ac.uk
 User USERNAME
 LocalForward localhost:3128 cache1a.internal.sanger.ac.uk:3128
 ForwardX11 yes
-ForwardX11Trusted yes&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/p&gt;
+ForwardX11Trusted yes&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;And now I only need to do &lt;code&gt;ssh Sanger_web&lt;/code&gt; to &quot;jump the gate&quot;.&lt;/p&gt;
+&lt;p&gt;And now I only need to do &lt;code class=&quot;highlighter-rouge&quot;&gt;ssh Sanger_web&lt;/code&gt; to “jump the gate”.&lt;/p&gt;
 </description>
         <pubDate>Mon, 11 Jan 2016 00:00:00 -0500</pubDate>
-        <link>http://AiGene.com/web-proxy</link>
-        <guid isPermaLink="true">http://AiGene.com/web-proxy</guid>
+        <link>http://AiGene.com/yluo86.github.io//web-proxy</link>
+        <guid isPermaLink="true">http://AiGene.com/yluo86.github.io//web-proxy</guid>
         
         
         <category>snippets</category>
@@ -8856,11 +8852,12 @@ ForwardX11Trusted yes&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/p&gt;
         <title>Recursive touch -- giving a new timestamp to your files</title>
         <description>&lt;p&gt;If you ever need to change the timestamp of a whole directory, here is a one liner to do so:&lt;/p&gt;
 
-&lt;p&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;find . -exec touch &lt;span class=&quot;o&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;find . -exec touch &lt;span class=&quot;o&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 </description>
         <pubDate>Fri, 11 Sep 2015 00:00:00 -0400</pubDate>
-        <link>http://AiGene.com/recursive-touch</link>
-        <guid isPermaLink="true">http://AiGene.com/recursive-touch</guid>
+        <link>http://AiGene.com/yluo86.github.io//recursive-touch</link>
+        <guid isPermaLink="true">http://AiGene.com/yluo86.github.io//recursive-touch</guid>
         
         
         <category>snippets</category>
@@ -8902,8 +8899,8 @@ We have also looked into 163 inflammatory bowel disease (IBD) associated loci, w
 In a way, the lack of association found in TB poses many interesting questions in itself and the long battle between us and TB continues. As Susan Sontag argued powerfully in her book Illness as Metaphor, TB, along with cancer, drain vitality… stretch out the encounter with death… [and] in both cases, dying, even more than death, defines illness. Genetics studies using modern technologies will have a lot to contribute to understand the disease that in many ways has shaped our understanding of illnesses and their cure.&lt;/p&gt;
 </description>
         <pubDate>Fri, 20 Mar 2015 11:11:17 -0400</pubDate>
-        <link>http://AiGene.com/TB-Genetics</link>
-        <guid isPermaLink="true">http://AiGene.com/TB-Genetics</guid>
+        <link>http://AiGene.com/yluo86.github.io//TB-Genetics</link>
+        <guid isPermaLink="true">http://AiGene.com/yluo86.github.io//TB-Genetics</guid>
         
         <category>GWAS</category>
         
@@ -8934,8 +8931,8 @@ HGDPdetailed-HGDP&lt;/p&gt;
 Even though I didn’t unravel any untold stories about my family history in the end, the little genomic voyage was fun and I do hope that not far in the future there will be a more concerted effort to gather genome data from the Eastern Asian populations, not just for the purpose of genealogy, but also for the many other benefits that this data can bring.&lt;/p&gt;
 </description>
         <pubDate>Thu, 15 Aug 2013 00:00:00 -0400</pubDate>
-        <link>http://AiGene.com/23andMe</link>
-        <guid isPermaLink="true">http://AiGene.com/23andMe</guid>
+        <link>http://AiGene.com/yluo86.github.io//23andMe</link>
+        <guid isPermaLink="true">http://AiGene.com/yluo86.github.io//23andMe</guid>
         
         <category>23andme</category>
         

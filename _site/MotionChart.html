@@ -7,12 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Talk like Hans Rosling</title>
-  <meta name="description" content="Preparing a motivation slide is not always straightforward. Inspired by a recent read Talk Like TED, I decided to add a bit of 'soul' into the recent data on...">
+  <meta name="description" content="Preparing a motivation slide is not always straightforward. Inspired by a recent read Talk Like TED, I decided to add a bit of ‘soul’ into the recent data on...">
 
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/yluo86.github.io//css/main.css">
 
-  <link rel="canonical" href="http://AiGene.com/MotionChart">
-  <link rel="alternate" type="application/rss+xml" title="AiGenome" href="http://AiGene.com/feed.xml">
+  <link rel="canonical" href="http://AiGene.com/yluo86.github.io//MotionChart">
+  <link rel="alternate" type="application/rss+xml" title="AiGenome" href="http://AiGene.com/yluo86.github.io//feed.xml">
 </head>
 
 
@@ -22,7 +22,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="/">AiGenome</a>
+    <a class="site-title" href="/yluo86.github.io//">AiGenome</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -36,21 +36,21 @@
       <div class="trigger">
         
           
-          <a class="page-link" href="/Blogs.html">Blogs</a>
+          <a class="page-link" href="/yluo86.github.io//Blogs.html">Blogs</a>
           
         
           
-          <a class="page-link" href="/about/">About</a>
-          
-        
-          
-        
+          <a class="page-link" href="/yluo86.github.io//about/">About</a>
           
         
           
         
           
-          <a class="page-link" href="/links.html">Links</a>
+        
+          
+        
+          
+          <a class="page-link" href="/yluo86.github.io//links.html">Links</a>
           
         
           
@@ -68,7 +68,7 @@
 	<div>
 
 
-		<a class="sidebar-nav-item" href="/">Categories</a>
+		<a class="sidebar-nav-item" href="/yluo86.github.io//">Categories</a>
 		<ul>
 			
 			<li>
@@ -77,7 +77,7 @@
 					science
 				
 				</a>
-				<sup>[3]</sup>
+				<sup>[4]</sup>
 			</li>
 			
 			<li>
@@ -104,12 +104,12 @@
 				<b>presentation</b>
 				
 				</a>
-				<sup>[1]</sup>
+				<sup>[2]</sup>
 			</li>
 			
 		</ul>
 		<hr/>
-		<a class="sidebar-nav-item" href="/">Tags</a>
+		<a class="sidebar-nav-item" href="/yluo86.github.io//">Tags</a>
 		<ul class="sidebar_tags">
 			
 <!-- 			<li> -->
@@ -200,6 +200,39 @@
 
 <!-- 			</li> -->
 			
+<!-- 			<li> -->
+				<a onclick="redirect('/tags.html#poster')">
+<!-- 				<a href="/blog/tag/testtag#poster"> -->
+				
+					poster
+				
+				</a>
+				<sup>[1]</sup>
+
+<!-- 			</li> -->
+			
+<!-- 			<li> -->
+				<a onclick="redirect('/tags.html#conference')">
+<!-- 				<a href="/blog/tag/testtag#conference"> -->
+				
+					conference
+				
+				</a>
+				<sup>[1]</sup>
+
+<!-- 			</li> -->
+			
+<!-- 			<li> -->
+				<a onclick="redirect('/tags.html#ASHG')">
+<!-- 				<a href="/blog/tag/testtag#ASHG"> -->
+				
+					ASHG
+				
+				</a>
+				<sup>[1]</sup>
+
+<!-- 			</li> -->
+			
 		</ul>
 		<hr/>
 	</div>
@@ -220,82 +253,74 @@
         <div class="post">
   <h1 class="post-title">Talk like Hans Rosling</h1>
   <span class="post-date">25 Feb 2016</span>
-  <p>Preparing a motivation slide is not always straightforward. Inspired by a recent read <a href="http://www.amazon.com/Talk-Like-TED-Public-Speaking-Secrets/dp/1250041120">Talk Like TED</a>, I decided to add a bit of 'soul' into the recent data on Tuberculosis (TB), and tell a story of how TB 'evolves' in the past 25 years. Back in November 2012, I did a similar <a href="http://wp.sanger.ac.uk/barrettgroup/2013/02/06/moving-from-common-to-rare/">motivational slide</a> using <a href="https://github.com/mages/googleVis"><em>googleVis</em></a> based on the well-known Hans Rosling's popular 18-minutes <a href="https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen">TED talk</a> in 2006 that has been viewed more than five million times.</p>
+  <p>Preparing a motivation slide is not always straightforward. Inspired by a recent read <a href="http://www.amazon.com/Talk-Like-TED-Public-Speaking-Secrets/dp/1250041120">Talk Like TED</a>, I decided to add a bit of ‘soul’ into the recent data on Tuberculosis (TB), and tell a story of how TB ‘evolves’ in the past 25 years. Back in November 2012, I did a similar <a href="http://wp.sanger.ac.uk/barrettgroup/2013/02/06/moving-from-common-to-rare/">motivational slide</a> using <a href="https://github.com/mages/googleVis"><em>googleVis</em></a> based on the well-known Hans Rosling’s popular 18-minutes <a href="https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen">TED talk</a> in 2006 that has been viewed more than five million times.</p>
 
-<p>In this blog, I will go into details of how I created the TB <a href="##%20Motion%20chart%20creation"><em>motion chart</em></a>, and maybe tell a story or two along the way.</p>
+<p>In this blog, I will go into details of how I created the TB <a href="## Motion chart creation"><em>motion chart</em></a>, and maybe tell a story or two along the way.</p>
 
-<h2>Installation</h2>
+<h2 id="installation">Installation</h2>
+<p>Assume you a R user, here’s how to install the development version of <em>googleVis</em> from github and its dependencies.</p>
 
-<p>Assume you a R user, here's how to install the development version of <em>googleVis</em> from github and its dependencies.</p>
+<div class="language-R highlighter-rouge"><pre class="highlight"><code><span class="n">install.packages</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s2">"devtools"</span><span class="p">,</span><span class="s2">"RJSONIO"</span><span class="p">,</span><span class="w"> </span><span class="s2">"knitr"</span><span class="p">,</span><span class="w"> </span><span class="s2">"shiny"</span><span class="p">,</span><span class="w"> </span><span class="s2">"httpuv"</span><span class="p">))</span><span class="w">  
+</span><span class="n">library</span><span class="p">(</span><span class="n">devtools</span><span class="p">)</span><span class="w">
+</span><span class="n">install_github</span><span class="p">(</span><span class="s2">"mages/googleVis"</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
 
-<pre><code class="R">install.packages(c("devtools","RJSONIO", "knitr", "shiny", "httpuv"))  
-library(devtools)
-install_github("mages/googleVis")
-</code></pre>
-
-<h2>Data preparation</h2>
+<h2 id="data-preparation">Data preparation</h2>
 
 <ol>
-<li>Download TB burden estimates from <a href="https://extranet.who.int/tme/generateCSV.asp?ds=estimates">WHO</a></li>
-<li>Download worldwide GDP per capita statistics from <a href="http://databank.worldbank.org/data/reports.aspx?source=2&amp;type=metadata&amp;series=NY.GDP.PCAP.CD#">the World Bank</a></li>
-<li>Merge the two dataset</li>
+  <li>Download TB burden estimates from <a href="https://extranet.who.int/tme/generateCSV.asp?ds=estimates">WHO</a></li>
+  <li>Download worldwide GDP per capita statistics from <a href="http://databank.worldbank.org/data/reports.aspx?source=2&amp;type=metadata&amp;series=NY.GDP.PCAP.CD#">the World Bank</a></li>
+  <li>Merge the two dataset</li>
 </ol>
 
+<div class="language-R highlighter-rouge"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">googleVis</span><span class="p">)</span><span class="w">
 
-<pre><code class="R">library(googleVis)
+</span><span class="c1">#load GDP data
+</span><span class="n">GDP</span><span class="o">&lt;-</span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"Data_Extract_From_World_Development_Indicators_Data.csv"</span><span class="p">,</span><span class="n">h</span><span class="o">=</span><span class="nb">T</span><span class="p">,</span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">,</span><span class="n">na.strings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">".."</span><span class="p">)</span><span class="w">
 
-#load GDP data
-GDP&lt;-read.csv("Data_Extract_From_World_Development_Indicators_Data.csv",h=T,stringsAsFactors = F,na.strings = "..")
+</span><span class="c1">#reshape the GDP data
+</span><span class="n">library</span><span class="p">(</span><span class="n">reshape</span><span class="p">)</span><span class="w">
+</span><span class="n">mdata</span><span class="o">&lt;-</span><span class="n">melt</span><span class="p">(</span><span class="n">GDP</span><span class="p">,</span><span class="n">id</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s2">"Country.Name"</span><span class="p">))</span><span class="w">
+</span><span class="nf">names</span><span class="p">(</span><span class="n">mdata</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">c</span><span class="p">(</span><span class="s2">"country"</span><span class="p">,</span><span class="s2">"year"</span><span class="p">,</span><span class="s2">"GDP_per_capita"</span><span class="p">)</span><span class="w">
+</span><span class="n">mdata</span><span class="o">$</span><span class="n">year</span><span class="o">&lt;-</span><span class="n">gsub</span><span class="p">(</span><span class="s2">"X"</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">mdata</span><span class="o">$</span><span class="n">year</span><span class="p">)</span><span class="w">
 
-#reshape the GDP data
-library(reshape)
-mdata&lt;-melt(GDP,id=c("Country.Name"))
-names(mdata)&lt;-c("country","year","GDP_per_capita")
-mdata$year&lt;-gsub("X", "", mdata$year)
+</span><span class="c1"># load TB burden data
+</span><span class="n">TB</span><span class="o">&lt;-</span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"TB_burden_countries_2016-02-18.csv"</span><span class="p">,</span><span class="n">h</span><span class="o">=</span><span class="nb">T</span><span class="p">,</span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">)</span><span class="w">
 
-# load TB burden data
-TB&lt;-read.csv("TB_burden_countries_2016-02-18.csv",h=T,stringsAsFactors = F)
+</span><span class="c1">#select picked country
+</span><span class="n">TB</span><span class="p">[</span><span class="n">TB</span><span class="o">$</span><span class="n">country</span><span class="o">==</span><span class="s2">"United States of America"</span><span class="p">,]</span><span class="o">$</span><span class="n">country</span><span class="o">&lt;-</span><span class="s2">"United States"</span><span class="w">
+</span><span class="n">countries</span><span class="o">&lt;-</span><span class="nf">c</span><span class="p">(</span><span class="n">unique</span><span class="p">(</span><span class="n">TB</span><span class="p">[</span><span class="n">TB</span><span class="o">$</span><span class="n">g_whoregion</span><span class="o">==</span><span class="s2">"AMR"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">TB</span><span class="o">$</span><span class="n">country</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">GDP</span><span class="o">$</span><span class="n">Country.Name</span><span class="p">,]</span><span class="o">$</span><span class="n">country</span><span class="p">))</span><span class="w">
+</span><span class="n">df1</span><span class="o">&lt;-</span><span class="n">mdata</span><span class="p">[</span><span class="n">mdata</span><span class="o">$</span><span class="n">country</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">countries</span><span class="p">,]</span><span class="w">
 
-#select picked country
-TB[TB$country=="United States of America",]$country&lt;-"United States"
-countries&lt;-c(unique(TB[TB$g_whoregion=="AMR" &amp; TB$country %in% GDP$Country.Name,]$country))
-df1&lt;-mdata[mdata$country %in% countries,]
+</span><span class="n">df2</span><span class="o">&lt;-</span><span class="n">subset</span><span class="p">(</span><span class="n">TB</span><span class="p">[</span><span class="n">TB</span><span class="o">$</span><span class="n">country</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">countries</span><span class="p">,],</span><span class="n">select</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s2">"country"</span><span class="p">,</span><span class="s2">"year"</span><span class="p">,</span><span class="s2">"g_whoregion"</span><span class="p">,</span><span class="s2">"e_pop_num"</span><span class="p">,</span><span class="s2">"e_prev_100k"</span><span class="p">,</span><span class="s2">"e_prev_num"</span><span class="p">,</span><span class="s2">"e_mort_exc_tbhiv_100k"</span><span class="p">,</span><span class="s2">"e_mort_exc_tbhiv_num"</span><span class="p">,</span><span class="s2">"e_inc_num"</span><span class="p">,</span><span class="s2">"e_inc_100k"</span><span class="p">))</span><span class="w">
 
-df2&lt;-subset(TB[TB$country %in% countries,],select=c("country","year","g_whoregion","e_pop_num","e_prev_100k","e_prev_num","e_mort_exc_tbhiv_100k","e_mort_exc_tbhiv_num","e_inc_num","e_inc_100k"))
+</span><span class="c1">#merge two dataset
+</span><span class="n">df</span><span class="o">&lt;-</span><span class="n">merge</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span><span class="n">df2</span><span class="p">,</span><span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s2">"country"</span><span class="p">,</span><span class="s2">"year"</span><span class="p">))</span><span class="w">
+</span><span class="n">df</span><span class="o">$</span><span class="n">year</span><span class="o">&lt;-</span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">year</span><span class="p">)</span><span class="w">
+</span><span class="n">df</span><span class="o">$</span><span class="n">GDP_per_capita</span><span class="o">&lt;-</span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">GDP_per_capita</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
 
-#merge two dataset
-df&lt;-merge(df1,df2,by=c("country","year"))
-df$year&lt;-as.numeric(df$year)
-df$GDP_per_capita&lt;-as.numeric(df$GDP_per_capita)
-</code></pre>
-
-<h2>Motion chart creation</h2>
-
+<h2 id="motion-chart-creation">Motion chart creation</h2>
 <p>Now we are ready to create the Motion chart:</p>
 
-<pre><code class="R"># Some customized options
-myState&lt;-'{"iconKeySettings":[{"key":{"dim0":"Peru"}}, {"key":{"dim0":"United States"}}],"colorOption":"2","yAxisOption":"7","xAxisOption":"5","showTrails":false, "sizeOption":"8","showXScalePicker":false    }'
+<div class="language-R highlighter-rouge"><pre class="highlight"><code><span class="c1"># Some customized options
+</span><span class="n">myState</span><span class="o">&lt;-</span><span class="s1">'{"iconKeySettings":[{"key":{"dim0":"Peru"}}, {"key":{"dim0":"United States"}}],"colorOption":"2","yAxisOption":"7","xAxisOption":"5","showTrails":false, "sizeOption":"8","showXScalePicker":false	}'</span><span class="w">
 
-# create the chart
-Motion=gvisMotionChart(df,idvar="country",timevar="year",xvar="e_prev_100k",yvar="e_mort_exc_tbhiv_100k",colorvar="g_wholeregion",sizevar="e_prev_num",options=list(state=myState))
+</span><span class="c1"># create the chart
+</span><span class="n">Motion</span><span class="o">=</span><span class="n">gvisMotionChart</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">idvar</span><span class="o">=</span><span class="s2">"country"</span><span class="p">,</span><span class="n">timevar</span><span class="o">=</span><span class="s2">"year"</span><span class="p">,</span><span class="n">xvar</span><span class="o">=</span><span class="s2">"e_prev_100k"</span><span class="p">,</span><span class="n">yvar</span><span class="o">=</span><span class="s2">"e_mort_exc_tbhiv_100k"</span><span class="p">,</span><span class="n">colorvar</span><span class="o">=</span><span class="s2">"g_wholeregion"</span><span class="p">,</span><span class="n">sizevar</span><span class="o">=</span><span class="s2">"e_prev_num"</span><span class="p">,</span><span class="n">options</span><span class="o">=</span><span class="nf">list</span><span class="p">(</span><span class="n">state</span><span class="o">=</span><span class="n">myState</span><span class="p">))</span><span class="w">
 
-# Plot it (this will open a html file in your web browser)
-plot(Motion)
-# save it as html
-cat(Motion$html$chart,file="MotionChart.html")
-</code></pre>
-
+</span><span class="c1"># Plot it (this will open a html file in your web browser)
+</span><span class="n">plot</span><span class="p">(</span><span class="n">Motion</span><span class="p">)</span><span class="w">
+</span><span class="c1"># save it as html
+</span><span class="n">cat</span><span class="p">(</span><span class="n">Motion</span><span class="o">$</span><span class="n">html</span><span class="o">$</span><span class="n">chart</span><span class="p">,</span><span class="n">file</span><span class="o">=</span><span class="s2">"MotionChart.html"</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
 <!-- MotionChart generated in R 3.2.2 by googleVis 0.5.10 package -->
-
-
 <!-- Thu Feb 18 16:53:39 2016 -->
 
-
-
-
 <!-- jsHeader -->
-
-
 <script type="text/javascript">
 
 // jsData
@@ -8925,34 +8950,20 @@ callbacks.shift()();
 // jsFooter
 </script>
 
-
-
-
 <!-- jsChart -->
-
-
-<p></p>
-
 <script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID16fe55a7c15c"></script>
 
-
-
-
 <!-- divChart -->
-
-
-
 
 <div name="motionchart" id="MotionChartID16fe55a7c15c" style="width: 600; height: 500;">
 <p></p>
 </div>
 
+<p>##</p>
 
-<h2></h2>
+<h2 id="embedding-it-in-latexhtml">Embedding it in Latex/html</h2>
 
-<h2>Embedding it in Latex/html</h2>
-
-<p>To embed the motion chart to a html based blog or slides are relatively straightforward -- you only need to copy and paste the html file we saved earlier to the desired source. However, adding it to Latex becomes a bit trickier. I have previously recorded it as a MPG4 and embedded it to latex as a movie using the <a href="http://ctan.mirrors.hoobly.com/macros/latex/contrib/animate/animate.pdf"><em>animate</em> package</a>. Otherwise, you can create a hyperlink to open the Motion Chart site page outside the latex presentation.</p>
+<p>To embed the motion chart to a html based blog or slides are relatively straightforward – you only need to copy and paste the html file we saved earlier to the desired source. However, adding it to Latex becomes a bit trickier. I have previously recorded it as a MPG4 and embedded it to latex as a movie using the <a href="http://ctan.mirrors.hoobly.com/macros/latex/contrib/animate/animate.pdf"><em>animate</em> package</a>. Otherwise, you can create a hyperlink to open the Motion Chart site page outside the latex presentation.</p>
 
 <p>But if you have a nice solution of presenting the motion chart in latex presentation, please let me know!</p>
 
@@ -8964,7 +8975,16 @@ callbacks.shift()();
     
       <li>
         <h3>
-          <a href="/array-design">
+          <a href="/yluo86.github.io//ashg2016">
+            Poster for ASHG 2016
+            <small>11 Oct 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/yluo86.github.io//array-design">
             Pipeline for genotype array design
             <small>12 Jan 2016</small>
           </a>
@@ -8973,18 +8993,9 @@ callbacks.shift()();
     
       <li>
         <h3>
-          <a href="/web-proxy">
+          <a href="/yluo86.github.io//web-proxy">
             ssh web-proxy -- working outside work
             <small>11 Jan 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/recursive-touch">
-            Recursive touch -- giving a new timestamp to your files
-            <small>11 Sep 2015</small>
           </a>
         </h3>
       </li>
