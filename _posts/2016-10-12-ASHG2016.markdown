@@ -12,4 +12,4 @@ My poster for ASHG 2016 titled "A customized genotype array to investigate the g
 
 You can download the high-resolution PDF file [ASHG poster]({{ site.baseurl }}/assets/images/ASHG2016.pdf)  here.
 
-![ASHG poster pdf]({{ site.baseurl }}/assets/images/ASHG2016.png)
+![ASHG poster pdf]({{ site.baseurl }}/assets/images/ashg.png)
