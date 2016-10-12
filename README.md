@@ -1,2 +1,2 @@
-# yluo86.github.io
-personal_blog
+# My personal blog
+Random notes and thoughts.

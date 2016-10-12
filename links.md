@@ -10,7 +10,7 @@ Here is a set of miscellaneous papers and books that I enjoyed, a number of blog
 
 <br>
 <a name="books"></a>
-<h1 align="center">Books of general interst</h1>
+<h1 align="center">Books of general interest</h1>
 <ul class="pagecontent">
 	   <li><a href="http://www.amazon.com/The-Immortal-Life-Henrietta-Lacks/dp/1400052181">The immortal life of Henrietta Lacks. Skloot (2011).</a> An excellent book with a twist of scientific progresses and personal stories followed after the first human cell line --  HeLa.</li>
 	   <li><a href="http://www.amazon.com/Mountains-Beyond-Farmer-Random-Readers/dp/0812980557">Mountains Beyond Mountains: The Quest of Dr. Paul Farmer, a Man Who Would Cure the World. Kidder (2009).</a> An inspiring book based on the work of Paul Farmer in his effort of treating tuberculosis in developing countries. </li>
@@ -18,15 +18,7 @@ Here is a set of miscellaneous papers and books that I enjoyed, a number of blog
 </ul>
 
 
-<!-- seminal papers -->
-<br>
-<center><a href="#top" class="red"><small>--- &#x25B2; ---</small></a></center>
-<a name="papers"></a>
-<h1 align="center">must-read papers</h1>
-<ul class="pagecontent">
-	   <li><a href="http://worrydream.com/refs/Shannon%20-%20A%20Mathematical%20Theory%20of%20Communication.pdf">A Mathematical Theory of Communication -- Shannon 1948</a></li>
-      <li><a href="http://www.feynmanlectures.caltech.edu/">The Feynman Lectures of Physics -- 1963</a></li>
-</ul>
+
 
 <!-- http://tnt.phys.uniroma1.it/twiki/pub/TNTgroup/AngeloVulpiani/cha.pdf Stochastic Problems in Physics and Astronomy Chandrasekhar 1943 -->
 
@@ -36,11 +28,8 @@ Here is a set of miscellaneous papers and books that I enjoyed, a number of blog
 <a name="interesting"></a>
 <h1 align="center">other nice notes & oddities</h1>
 <ul class="pagecontent">
-	   <li><a href="http://cs.stanford.edu/people/davidknowles/lagrangian_duality.pdf">nice explanation of Lagrangian Duality</a></li>
-      <li><a href="http://www.ics.uci.edu/~welling/classnotes/papers_class/Convex-Opt.pdf">Essentials of Convex Optimization</a></li>
-	   <li><a href="http://colah.github.io/">Colah's blog</a></li>
-	   <li><a href="http://www.oneweirdkerneltrick.com/spectral.pdf">A Spectral Approach to Ghost Detection</a></li>
-	   <li><a href="http://www.oneweirdkerneltrick.com/catbasis.pdf">Cat Basis Purrsuit</a></li>
+	   <li><a href="http://faculty.washington.edu/tathornt/SISG2015/lectures/Taipei2015/">Nice tutorial covers the basic of statistical genetics (2015)</a></li>
+	   <li><a href="https://aatishb.github.io/entropy/">Entropy explained, with sheep</a></li>
 
 </ul>
 
@@ -49,11 +38,11 @@ Here is a set of miscellaneous papers and books that I enjoyed, a number of blog
 <br>
 <center><a href="#top" class="red"><small>--- &#x25B2; ---</small></a></center>
 <a name="read"></a>
-<h1 align="center">prose by pros</h1>
+<h1 align="center">other interesting blogs that I follow</h1>
 <ul class="pagecontent">
-      <li><a href="http://www.nytimes.com/2006/08/20/sports/playmagazine/20federer.html?pagewanted=all&_r=0">Federer as Religious Experience (David Foster Wallace)</a></li>
-      <li><a href="http://www.bartleby.com/198/">Prufrock and Other Observations (T.S. Eliot) (okay yes this is a poem)</a></li>
-      <li><a href="https://keysduplicated.com/~ali/words.html">Lexicon for a New Decade of Machine Learning Research (Ali Rahimi)</a></li>
+      <li><a href="http://genomeinformatician.blogspot.com/">Ewan's (director of EMBL-EBI) blog, full of characters</a></li>
+      <li><a href="https://joepickrell.wordpress.com/author/joepickrell/">Beanbag Genomics by Joe Pickrell full of insightful and interesting posts</a></li>
+      <li><a href="http://www.saistent.com/">Robotics</a></li>
 
 {% if page.tags contains 'draft' %}
       <li><a href="https://twitter.com/CV_Hipster">CV\_hipster</a></li>
