@@ -8,7 +8,7 @@ author: Yang
 permalink: ashg2016
 ---
 
-My poster for ASHG 2016 titled "A customized genotype array to investigate the genetic architecture of tuberculosis in Peru" shows how we utilized information from whole exome sequencing and whole genome sequencing of Peruvian individuals to design a customized arrow that tailored for Peruvian populations.
+My poster for ASHG 2016 titled "A customized genotype array to investigate the genetic architecture of tuberculosis in Peru" shows how we utilized information from whole exome sequencing and whole genome sequencing of Peruvian individuals to design a customized array that tailored for Peruvian populations.
 
 You can download the high-resolution PDF file [ASHG poster]({{ site.baseurl }}/assets/images/ASHG2016.pdf)  here.
 

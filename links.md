@@ -42,7 +42,7 @@ Here is a set of miscellaneous papers and books that I enjoyed, a number of blog
 <ul class="pagecontent">
       <li><a href="http://genomeinformatician.blogspot.com/">Ewan's (director of EMBL-EBI) blog, full of characters</a></li>
       <li><a href="https://joepickrell.wordpress.com/author/joepickrell/">Beanbag Genomics by Joe Pickrell full of insightful and interesting posts</a></li>
-      <li><a href="http://www.saistent.com/">Robotics</a></li>
+      <li><a href="http://www.saistent.com/">Computer vision</a></li>
 
 {% if page.tags contains 'draft' %}
       <li><a href="https://twitter.com/CV_Hipster">CV\_hipster</a></li>
