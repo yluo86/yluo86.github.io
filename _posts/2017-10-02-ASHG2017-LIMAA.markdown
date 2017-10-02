@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ASHG2017:Genome-Wide Association in Peru \\Demonstrates that Progression to Active Tuberculosis is a Polygenic and Highly Heritable Trait"
+title:  "ASHG2017:Genome-Wide Association in Peru Demonstrates that Progression to Active Tuberculosis is a Polygenic and Highly Heritable Trait"
 date:   2017-10-02
 categories: science presentation
 tags: ASHG conference
