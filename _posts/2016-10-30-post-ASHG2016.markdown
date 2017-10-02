@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "Post ASHG 2016"
+date:   2016-10-20
+categories: science presentation
+tags: ASHG conference
+author: Yang
+permalink: ashg2016
+---
+
+A continuation of enriching our understanding of non-coding regions.
+
+The bigger, the merrier
+Large consortium efforts: HRC, ExAC v2 released
+
+Methods dealing with these bigger dataset: SHAPEIT3,

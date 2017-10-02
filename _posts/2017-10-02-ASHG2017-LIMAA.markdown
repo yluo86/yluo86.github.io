@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "ASHG2017:Genome-Wide Association in Peru \\Demonstrates that Progression to Active Tuberculosis is a Polygenic and Highly Heritable Trait"
+date:   2017-10-02
+categories: science presentation
+tags: ASHG conference
+author: Yang
+permalink: ashg2017
+---
+Only ~10% of the 1.5 billion Mycobacterium tuberculosis (Mtb) infected individuals worldwide go on to develop active tuberculosis (TB), host genetic factors that control disease progression have emerged as a central question in TB pathogenesis. Here we conducted the first and the largest GWAS of TB progression in Lima, Peru and showed that TB progression is a polygenic and highly heritable trait.
+You can download the high-resolution PDF file [ASHG poster]({{ site.baseurl }}/assets/images/ASHG2016.pdf)  here.
+
+![ASHG poster pdf]({{ site.baseurl }}/assets/images/ashg2016.png)
