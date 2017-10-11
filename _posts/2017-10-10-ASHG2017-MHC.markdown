@@ -5,11 +5,11 @@ date:   2017-10-10
 categories: science presentation
 tags: ASHG conference
 author: Yang
-permalink: ashg2017
+permalink: ashg2017mhc
 ---
 This year I'm bringing two posters for ASHG, the seocond one, is on how to improve HLA typing and association studies based on high-coverage whole-genome sequencing.
 \\
-In this work, we show that high-coverage WGS opens new opportunities to study one of the most changlling regions of the human genome -- HLA. By ultising information from WGS, we constructed the first multi-ethnic HLA reference panel at G-group resolution. 
+In this work, we show that high-coverage WGS opens new opportunities to study one of the most changlling regions of the human genome -- HLA. By ultising information from WGS, we constructed the first multi-ethnic HLA reference panel at G-group resolution.
 \\
 You can download the high-resolution PDF file [ASHG poster]({{ site.baseurl }}/assets/images/ASHG2016.pdf)  here.
 
