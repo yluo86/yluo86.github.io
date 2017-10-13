@@ -9,6 +9,6 @@ permalink: ashg2017
 ---
 Continuing of our work on TB progression, this year at ASHG, we present our latest findings of a novel genetic locus that associated with TB progression. We also demonstrate that TB progression is a polygenic and heritable trait.
 \\
-You can download the high-resolution PDF file [ASHG poster]({{ site.baseurl }}/assets/images/ASHG2016.pdf)  here.
+You can download the high-resolution PDF file [ASHG poster]({{ site.baseurl }}/assets/images/ASHG2017_LIMAA.pdf)  here.
 
-![ASHG poster pdf]({{ site.baseurl }}/assets/images/ashg2016.png)
+![ASHG poster pdf]({{ site.baseurl }}/assets/images/ASHG2017_LIMAA.png)
