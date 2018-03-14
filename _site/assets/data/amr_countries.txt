@@ -1,0 +1,50 @@
+Antigua
+Barbuda
+Aruba
+Bahamas
+Barbados
+Cayman Islands:Grand Cayman
+Cayman Islands:Little Cayman
+Cayman Islands:Cayman Brac
+Cuba
+Dominica
+Dominican Republic
+Grenada
+Guadeloupe
+Haiti
+Jamaica
+Martinique
+Puerto Rico
+Saint Barthelemy
+Saint Kitts
+Nevis
+St. Lucia
+Saint Vincent
+Grenadines:Canouan
+Grenadines:Bequia
+Trinidad
+Tobago
+Turks and Caicos Islands:Providenciales Island
+Turks and Caicos Islands:Grand Caicos Island
+Turks and Caicos Islands:North Caicos Island
+Virgin Islands
+Belize
+Costa Rica
+El Salvador
+Guatemala
+Honduras
+Mexico
+Nicaragua
+Panama
+Argentina
+Bolivia
+Brazil
+Chile
+Colombia
+Ecuador
+Guyana
+Paraguay
+Peru
+Suriname
+Uruguay
+Venezuela

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Talk like Hans Rosling"
-date:   2016-02-25
+date:   2016-03-01
 categories: presentation
 tags: bioinformatics motionchart R
 author: Yang
