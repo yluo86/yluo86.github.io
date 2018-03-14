@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Poster for ASHG 2016"
+title:  "A customized genotype array to investigate the genetic architecture of tuberculosis in Peru"
 date:   2016-10-11
 categories: science presentation
 tags: poster conference ASHG
