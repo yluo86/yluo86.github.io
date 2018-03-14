@@ -3,7 +3,7 @@ layout: post
 title:  "Novel high-resolution multi-ethnic HLA imputation reference panels constructed based on high-coverage whole-genome sequencing data"
 date:   2017-10-10
 categories: science presentation
-tags: ASHG conference
+tags: ASHG conference poster
 author: Yang
 permalink: ashg2017mhc
 ---
