@@ -7,7 +7,7 @@ tags: bioinformatics R
 author: Yang
 permalink: rmaps
 ---
-Previously I posted about using [googleVis](https://github.com/mages/googleVis)  to create [MotionChart]({{site.baseurl}}/MotionChart.html) or Maps. Recently in my work, I need to reproduce and modify a map of America from [Reich et al 2012](https://www.nature.com/articles/nature11258) Nature paper on *reconstructing Native American population history*. To keep it brief, I want to modify a map based on the original paper (left), but with customized information (right) without manually manipulating the figure in graphics softwares.![original]({{site.baseurl}}/assets/images/nat_map.png)
+Previously I posted about using [googleVis](https://github.com/mages/googleVis)  to create [MotionChart]({{site.baseurl}}/MotionChart.html) or Maps. Recently in my work, I need to reproduce and modify a map of America from [Reich et al 2012](https://www.nature.com/articles/nature11258) Nature paper on *reconstructing Native American population history*. To keep it brief, I want to modify a map based on the original paper (left), but with customized information (right) without manually manipulating the figure in graphics softwares.![original]({{site.baseurl}}/assets/images/nat_map.png){:height="400px" width="600px"}
 
 To start, here are the prerequisties you need to install:
 
