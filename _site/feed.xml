@@ -5,13 +5,13 @@
     <description></description>
     <link>http://AiGene.com/yluo86.github.io//</link>
     <atom:link href="http://AiGene.com/yluo86.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 15 Mar 2018 00:00:08 -0400</pubDate>
-    <lastBuildDate>Thu, 15 Mar 2018 00:00:08 -0400</lastBuildDate>
+    <pubDate>Thu, 15 Mar 2018 00:06:01 -0400</pubDate>
+    <lastBuildDate>Thu, 15 Mar 2018 00:06:01 -0400</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
         <title>Drawing world maps using R</title>
-        <description>&lt;p&gt;Previously I posted about using &lt;a href=&quot;https://github.com/mages/googleVis&quot;&gt;googleVis&lt;/a&gt;  to create &lt;a href=&quot;/yluo86.github.io//MotionChart.html&quot;&gt;MotionChart&lt;/a&gt; or Maps. Recently in my work, I need to reproduce and modify a map of America from &lt;a href=&quot;https://www.nature.com/articles/nature11258&quot;&gt;Reich et al 2012&lt;/a&gt; Nature paper on &lt;em&gt;reconstructing Native American population history&lt;/em&gt;. To keep it brief, I want to reproduce a map similar to this without manually manipulating the figure in a graphics software.&lt;img src=&quot;/yluo86.github.io//assets/images/nat_map.png&quot; alt=&quot;original&quot; /&gt;&lt;/p&gt;
+        <description>&lt;p&gt;Previously I posted about using &lt;a href=&quot;https://github.com/mages/googleVis&quot;&gt;googleVis&lt;/a&gt;  to create &lt;a href=&quot;/yluo86.github.io//MotionChart.html&quot;&gt;MotionChart&lt;/a&gt; or Maps. Recently in my work, I need to reproduce and modify a map of America from &lt;a href=&quot;https://www.nature.com/articles/nature11258&quot;&gt;Reich et al 2012&lt;/a&gt; Nature paper on &lt;em&gt;reconstructing Native American population history&lt;/em&gt;. To keep it brief, I want to modify a map based on the original paper (left), but with customized information (right) without manually manipulating the figure in graphics softwares.&lt;img src=&quot;/yluo86.github.io//assets/images/nat_map.png&quot; alt=&quot;original&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;To start, here are the prerequisties you need to install:&lt;/p&gt;
 
